@@ -3,7 +3,79 @@
     padding: 0;
     box-sizing: border-box;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+  body, html {
+    margin: 0;
+    padding: 0;
+    background: var(--bg-color);
+    color: var(--font-color);
+    z-index: -10;
   } 
+  :root {
+    --primary-color: #ff6600;
+    --secondary-color: #ffc600;
+    --font-color: rgba(22, 28, 45, 0.7);
+    --bg-color: #fff;
+    --heading-color: #232121;
+    --border-radius: 6px;
+    --border-radius-full: 35px;
+    --border-color: transparent;
+    --border-color-light: #eee;
+    --nav-color: #232121;
+    --dropdown-color: #fff;
+    --iframe-filter: grayscale(0%);
+    --bg-light: rgba(130, 115, 252, .05);
+    --bg-grey: #f7f7f7;
+    --footer-bg: #000;
+    --card-bg: #fff;
+}
+  :root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: var(--primary-color);
+    --secondary: #f8b195;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+  [data-theme="dark"] {
+    --primary-color: #ff6600;
+    --secondary-color: #ffc600;
+    --font-color: #c2d0da;
+    --bg-color: #232220;
+    --heading-color: #eee;
+    --border-color: rgba(255, 255, 255, 0.2);
+    --border-color-light: rgba(255, 255, 255, 0.1);
+    --nav-color: #fff;
+    --dropdown-color: #121725;
+    --iframe-filter: grayscale(100%);
+    --bg-light: #282828;
+    --bg-grey: #282828;
+    --card-bg: #888c96;
+    --footer-bg: #000;
+  }
+  
   a {
     text-decoration: none;
   }
@@ -44,7 +116,7 @@
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
-  color:#232121;
+  color:var(--heading-color);
   font-family: 'Quicksand', sans-serif;
 }
 h1 a.logo-brand {
@@ -74,15 +146,15 @@ h1 a.logo-brand {
   padding: 10px 50px 10px 20px;
   height: 45px;
   font-size: 16px;
-  color:rgba(22, 28, 45, 0.7);
+  color:var(--font-color);
   border: none;
   font-weight: 400;
-  border-radius: 6px;
+  border-radius: var(--border-radius);
   position: relative;
   right: 0;
-  background:#fff;
+  background:var(--bg-color);
   outline: 0;
-  border: 1px solid #fff;
+  border: 1px solid var(--bg-color);
 }
 .w3menu-right-content .search-bar .search .search__icon {
   position: absolute;
@@ -122,8 +194,8 @@ h1 a.logo-brand {
   border-radius: 100px;
   box-shadow: inset 0 0 0 2px;
   border: 6px solid transparent;
-  width: 24px;
 }
+
 .gg-moon {
   overflow: hidden;
   position: relative;
@@ -132,16 +204,15 @@ h1 a.logo-brand {
   height: 20px;
   border: 2px solid;
   border-bottom: 2px solid transparent;
+}
+
+.gg-moon,
+.gg-moon:after {
+  display: block;
+  box-sizing: border-box;
   border-radius: 50%;
 }
-.mode-container i.gg-sun {
-  display: none;
-  color: #eee;
-}
-.mode-container i.gg-moon {
-  display: block;
-  color: #eee;
-}
+
 .gg-moon:after {
   content: "";
   position: absolute;
@@ -151,6 +222,51 @@ h1 a.logo-brand {
   box-shadow: 0 0 0 2px;
   top: 8px;
   left: 2px;
+}
+
+.gg-sun,
+.gg-sun:after,
+.gg-sun:before {
+  box-sizing: border-box;
+  display: block;
+  width: 24px;
+}
+
+.gg-sun:after,
+.gg-sun:before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  border-right: 4px solid;
+  border-left: 4px solid;
+  left: -6px;
+  top: 5px;
+}
+
+.gg-sun:before {
+  transform: rotate(-45deg);
+}
+
+.gg-sun:after {
+  transform: rotate(45deg);
+}
+
+.mode-container i.gg-sun {
+  display: none;
+  color: #eee;
+}
+
+.mode-container i.gg-moon {
+  display: block;
+  color: #eee;
+}
+
+input:checked+.mode-container i.gg-sun {
+  display: block;
+}
+
+input:checked+.mode-container i.gg-moon {
+  display: none;
 }
 .w3lhny-banner .bannerhny-info {
   max-width: 600px;
@@ -237,7 +353,7 @@ h1 a.logo-brand {
   font-weight: 400;
   line-height: 30px;
   letter-spacing: 1px;
-  color: #ff6600;
+  color: var(--primary-color);
   display: block;
   font-family: 'Pacifico', cursive;
 }
@@ -246,12 +362,12 @@ h1 a.logo-brand {
   line-height: 48px;
   font-weight: 600;
 }
-.about-content-1  p {
+.about-content-1 p {
   margin: 0;
   padding: 0;
   font-size: 18px;
   line-height: 28px;
-  color: rgba(22, 28, 45, 0.7);
+  color: var(--font-color);
   font-family: 'Quicksand', sans-serif;
 }
 @media (min-width: 992px){
@@ -422,7 +538,7 @@ h1 a.logo-brand {
 }}
 /* categories */
 .categories {
-  background: #f7f7f7;
+  background: var(--bg-grey);
 }
 .categories .gal-slide-img {
   position: relative;
@@ -534,9 +650,9 @@ img {
   transition: all 0.5s ease 0s;
   border-radius: 8px;
   box-shadow: 0 25px 98px 0 rgb(0 0 0 / 3%);
-  background-color:#fff;
+  background-color:var(--bg-color);
   position: relative;
-  border: 1px solid #eee;
+  border: 1px solid var(--border-color-light);
 }
 .box-wrap-grid {
   display: grid;
@@ -727,7 +843,7 @@ img {
 .w3l-clients blockquote q {
   font-size: 24px;
   line-height: 36px;
-  color: #232121;
+  color: var(--heading-color);
   font-weight: 600;
 }
 .w3l-clients blockquote q::before {
@@ -749,7 +865,7 @@ blockquote q {
   padding: 0;
   font-size: 18px;
   line-height: 28px;
-  color:rgba(22, 28, 45, 0.7);
+  color:var(--font-color);
   font-family: 'Quicksand', sans-serif;
 }
 .w3l-clients .testimonial .peopl h3, .w3l-clients .testimonial .people-info h3 {
@@ -946,9 +1062,9 @@ button {
 }
 
 .static .list .item{
-  padding: 50px;
-  border-radius: 6px;
-  background-color: white;
+  padding: 40px;
+  border-radius: var(--border-radius);
+  background-color: var(--bg-color);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
 }
 
@@ -982,7 +1098,7 @@ button {
 .w3l-videohny{
   display: block;
   height: 1000px;
-  background-color: white;
+  background-color: var(--bg-color);
   padding-top: 300px;
   text-align: center;
 }
@@ -992,7 +1108,7 @@ button {
 }
 
 .w3l-blogposts{
-  background-color: #f7f7f7;
+  background-color: var(--bg-color);
 }
 
 .w3l-blogposts .title-subhny{
