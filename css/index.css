@@ -1108,7 +1108,8 @@ button {
 }
 
 .w3l-blogposts{
-  background-color: var(--bg-color);
+  background-color: #f7f7f7;
+  height: 760px;
 }
 
 .w3l-blogposts .title-subhny{
@@ -1120,6 +1121,66 @@ button {
 .w3l-blogposts h3{
   font-family: 'Quicksand', sans-serif;
 }
+
+.post-pos {
+  position: absolute;
+  top: 180px;
+  left: 20px;
+}
+
+.post-pos a{
+  display: inline-block;
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  background-color: #ff6600;
+  border-radius: 20px;
+  padding: 2px 20px 3px 20px;
+}
+
+.post-pos span{
+  color: white;
+}
+
+.w3l-blogposts .card .card-body{
+  position: absolute;
+  text-align: left;
+  margin: 240px 0px 0px 0px;
+}
+
+.w3l-blogposts .card .card-body a{
+  text-decoration: none;
+  color: #000;
+  font-size: 24px;
+  font-weight: 600;
+  
+}
+
+.w3l-blogposts .card .card-body p{
+  color: #818181;
+  font-size: 17px;  
+  padding: 10px 20px 10px 0px;
+}
+
+.w3l-blogposts .card .card-body img{
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  margin-right: 7px;
+}
+
+.w3l-blogposts .card .card-body .p-footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.w3l-blogposts .card .card-body .p-footer a{
+  font-size: 16px;
+  font-weight: 700;
+}
+
+
 
 
 
@@ -1154,6 +1215,7 @@ button {
 
 .footer{
   background-color: black;
+  text-align: left;
 }
 
 .footer p{
@@ -1171,13 +1233,31 @@ button {
   display: flex;
   justify-content: flex-start;
   padding: 80px 80px 80px 80px;
-  border-bottom: white solid 1px;
+  border-bottom: rgb(49, 49, 49) solid 0.5px;
 }
 
 .footer .footer-item .footer-item-1{
   width: 500px;
   margin: 0px 80px 0px 0px;
-  
+}
+
+.footer .footer-item .footer-item-1 a{
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  padding-top: 5px;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #ff6600;
+  transition: all 0.3s;
+  margin-right: 10px;
+}
+
+.footer .footer-item .footer-item-1 a:hover{
+  background-color: #ff6600;
+  color: #ffffff;
+  transition: all 0.3s;
 }
 
 .footer .footer-item .footer-item-2{
@@ -1197,6 +1277,20 @@ button {
   
 }
 
+.footer .footer-item-extra a{
+  text-decoration: none;
+  color: #ff6600;
+}
+
+.footer .footer-item-extra a:hover{
+  color: #ffffff;
+}
+
+.footer .footer-item-extra p{
+  margin: 20px 0px;
+}
+
+
 .footer .footer-item-extra .item-2{
   display: flex;
   justify-content: space-around;
@@ -1204,5 +1298,24 @@ button {
 
 .footer .footer-item-extra .item-2 p{
   margin-left: 20px;
+}
+
+.footer .footer-item-4 .subscribe input{
+  width: 100%;
+  padding: 15px 15px;
+  border-radius: 6px;
+  font-size: 18px;
+  border: #ff6600 solid 1px;
+}
+
+.footer .footer-item-4 .subscribe .btn{
+  background-color: #ff6600;
+  color: #ffffff;
+  border: none;
+}
+
+.footer .footer-item-4 .subscribe .btn:hover{
+  background-color: #ff6600bd;
+  color: #ffffffbd;
 }
 
