@@ -1103,9 +1103,69 @@ button {
   text-align: center;
 }
 
-.w3l-videohny iframe{
+/* .w3l-videohny iframe{
   border-radius: 6px;
+} */
+
+#small-dialog {
+  max-width: 750px;
+  margin: 40px auto;
+  position: relative;
 }
+div#small-dialog iframe {
+  width: 100%;
+  height: 420px;
+  display: block;
+  border-radius: 10px;
+}
+.mfp-close-btn-in .mfp-close {
+  color: #fff;
+}
+.mfp-close,
+.mfp-close:active {
+  top: -40px;
+}
+
+/**
+   * Fade-zoom animation for first dialog
+   */
+/* start state */
+.my-mfp-zoom-in .zoom-anim-dialog {
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  transform: scale(0.8);
+}
+
+/* animate in */
+.my-mfp-zoom-in.mfp-ready .zoom-anim-dialog {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* animate out */
+.my-mfp-zoom-in.mfp-removing .zoom-anim-dialog {
+  transform: scale(0.8);
+  opacity: 0;
+}
+
+/* Dark overlay, start state */
+.my-mfp-zoom-in.mfp-bg {
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+/* animate in */
+.my-mfp-zoom-in.mfp-ready.mfp-bg {
+  opacity: 0.95;
+}
+
+/* animate out */
+.my-mfp-zoom-in.mfp-removing.mfp-bg {
+  opacity: 0;
+}
+
+
+
 
 .w3l-blogposts{
   background-color: #f7f7f7;

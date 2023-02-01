@@ -6,19 +6,31 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-<!-- FontAwesome 6.2.0 CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="//fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-    <link href="//fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet">
-    <!--/Template-CSS -->
-    <link rel="stylesheet" href="css/nav-overlay.css">
-    <link rel="stylesheet" href="/css/index.css">    
+
+
+  <!-- FontAwesome 6.2.0 CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  <link href="//fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+
+  <link href="//fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+  <!--/Template-CSS -->
+  <link rel="stylesheet" href="css/nav-overlay.css">
+
+
+  <link rel="stylesheet" href="/css/index.css">  
+
+  <!-- magnific video -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
+
 </head>
 <body>
       <!--/banner-with-header-->
@@ -395,8 +407,24 @@
 
 
 <section class="w3l-videohny" id="video">
-  <iframe width="1100" height="615" src="https://player.vimeo.com/video/305185528"></iframe>
+  <!-- <iframe width="1100" height="615" src="https://player.vimeo.com/video/305185528"></iframe> -->
+
+
+  <a href="#small-dialog" class="open-popup-link popup-with-zoom-anim">
+    <i class="fa-solid fa-play"></i>
+  </a>
+  
+  <div id="small-dialog" class="zoom-anim-dialog mfp-hide">
+    <iframe src="https://player.vimeo.com/video/305185528" frameborder="0" allow="autoplay; fullscreen" allowfullscreen=""></iframe>
+  </div>
+
+
 </section>
+
+
+
+
+
 
 <section class="w3l-blogposts py-5" id="blogs">
   <div class="container py-md-5 py-2">
@@ -643,7 +671,7 @@
             <input type="email" name="email" placeholder="Your Email Address" required="">
             <button class="btn btn-style btn-primary w-100 mt-3">Subscibe Now</button>
           </form>
-          
+
       </div>
   </div>
 
@@ -798,13 +826,18 @@
     els.forEach(makeCountup);
 </script>
 
-
+<script src="/js/magnific-popup-video-2.js"></script>
 
  
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"> </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
 </body>
 
 </html>
