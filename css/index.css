@@ -1239,7 +1239,7 @@ button {
 .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
   background: var(--primary-color);
 }
-article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+.deliciousness{
   display: block;
 }
 .no-js .owl-carousel, .owl-carousel.owl-loaded {
