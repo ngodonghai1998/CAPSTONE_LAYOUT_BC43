@@ -792,11 +792,46 @@ img {
 
 
 .w3l-videohny{
-  display: block;
-  height: 1000px;
+  display: flex;
+  justify-content: center;
+  height: 900px;
   background-color: var(--bg-color);
   padding-top: 300px;
   text-align: center;
+}
+
+.w3l-videohny a{
+  background-image: url(/img/banner3.jpg);
+  width: 1200px;
+  height: 500px;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 6px;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.w3l-videohny i{
+  width: 80px;
+  height: 80px;
+  background: rgb(255, 255, 255);
+  color: #ff6600;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  border-radius: 100%;
+  transition: all 0.5s;
+}
+
+.w3l-videohny i:hover{
+  width: 110px;
+  height: 110px;
+  background: #ff6600;
+  color: #ffffff;
+  transition: all 0.5s;
 }
 
 /* .w3l-videohny iframe{
