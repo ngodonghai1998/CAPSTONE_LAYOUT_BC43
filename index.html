@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function with calculation</title>
+
+
+    <!-- boostrap 5.3.0 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+
+
+    <!-- STYLE css -->
+    <link rel="stylesheet" href="/style/index.css">
+
+</head>
+<body>
+
+    <section>
+        <div class="mx-auto" style="width: 500px; height: 50px;">
+            <h3>Bài tập nộp: Quản lý tuyển sinh</h3>
+        </div>
+        <div class="input-group mb-3">
+            <label class="input-group-text" for = "inputGroupSelect01">Khu vực</label>
+            <select class="form-select" id="inputGroupSelect01">
+                <option value="null" selected>Chọn khu vực ...</option>
+                <option value="0">Không thuộc khu vực ưu tiên</option>
+                <option value="2">Khu vực A: Cộng 2 điểm</option>
+                <option value="1">Khu vực B: Cộng 1 điểm</option>
+                <option value="0.5">Khu vực C: Cộng 0.5 điểm</option>
+            </select>
+        </div>
+    
+        <div class="input-group mb-3">
+            <label class="input-group-text" for = "inputGroupSelect02">Đối tượng</label>
+            <select class="form-select" id="inputGroupSelect02">
+                <option value="null" selected>Chọn đối tượng ...</option>
+                <option value="0">Không thuộc đối tượng ưu tiên</option>
+                <option value="2.5">Đối tượng 1: Cộng 2.5 điểm</option>
+                <option value="1.5">Đối tượng 2: Cộng 1.5 điểm</option>
+                <option value="1">Đối tượng 3: Cộng 1 điểm</option>
+            </select>
+        </div>
+    
+        <div class="mb-3">
+            <label class="form-label">Nhập điểm Toán:</label>
+            <textarea class="form-control" id="inputDiemToan" rows="1"></textarea>
+        </div>
+    
+        <div class="mb-3">
+            <label class="form-label">Nhập điểm Lý:</label>
+            <textarea class="form-control" id="inputDiemLy" rows="1"></textarea>
+        </div>
+    
+        <div class="mb-3">
+            <label class="form-label">Nhập điểm Hóa:</label>
+            <textarea class="form-control" id="inputDiemHoa" rows="1"></textarea>
+        </div>
+    
+        <div>
+            <button class="btn btn-success my-2" onclick="btnTest()">Kết quả</button>
+        </div>
+    
+        <span id="output">0</span>
+    </section>
+
+    <section>
+        <div class="mx-auto" style="width: 400px; height: 50px;">
+            <h3>Bài tập nộp: Tính tiền điện</h3>
+        </div>
+        <p>Viết chương trình nhập vào thông tin tiêu thụ điện (Tên, số kW)</p>
+        <p>Tính và xuất tiền trả theo quy tắc:</p>
+        <p> - 50kW đầu: 500 đồng/kW</p>
+        <p> - 50kW kế: 650 đồng/kW</p>
+        <p> - 100kW kế: 850 đồng/kW</p>
+        <p> - 150kW kế: 1100 đồng/kW</p>
+        <p> - Còn lại: 1300 đồng/kW</p>
+
+
+        <div class="mb-3">
+            <label class="form-label">Nhập tên người dùng:</label>
+            <textarea class="form-control" id="inputTenUser" rows="1"></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Nhập số KW điện đã dùng:</label>
+            <textarea class="form-control" id="inputDongTieuThu" rows="1"></textarea>
+        </div>
+    
+        <div>
+            <button class="btn btn-success my-2" onclick="btnTinhTienDien()" id="btnTienDien">Kết quả</button>
+        </div>
+    
+        <p>Tiền điện của <span id="outputUser">Person</span> là <span id="outputTienDien">0</span>.</p>
+
+    </section>
+
+    <section>
+        <div class="mx-auto" style="width: 600px; height: 50px;">
+            <h3>Bài tập nộp: Tính thuế thu nhập cá nhân</h3>
+        </div>
+        <p>Viết chương trình nhập vào thông tin của 1 cá nhân (Họ tên, tổng thu nhập năm, số người phụ thuộc).</p>
+        <p>Thu nhập chịu thuế = Tổng thu nhập năm - 4tr- Số người phụ thuộc * 1.6tr</p>
+        <p>Tính và xuất thuế thu nhập cá nhân phải trả theo quy định sau:</p>
+        <p> - Đến 60: 5%</p>
+        <p> - Trên 60 đến 120: 10%</p>
+        <p> - Trên 120 đến 210: 15%</p>
+        <p> - Trên 210 đến 384: 20%</p>
+        <p> - Trên 384 đến 624: 25%</p>
+        <p> - Trên 624 đến 960: 30%</p>
+        <p> - Trên 960: 35%</p>
+
+
+        <div class="mb-3">
+            <label class="form-label">Nhập tên người dùng:</label>
+            <textarea class="form-control" id="inputTaxUser" rows="1"></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Nhập tổng thu nhập năm (Đơn vị: triệu):</label>
+            <textarea class="form-control" id="inputIncome" rows="1"></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Nhập số người phụ thuộc:</label>
+            <textarea class="form-control" id="inputRelyUser" rows="1"></textarea>
+        </div>
+    
+        <div>
+            <button class="btn btn-success my-2" onclick="btnTinhTax()" id="btnTax">Kết quả</button>
+        </div>
+    
+        <p>Tiền thuế của <span id="outputUserTax">Person</span> có <span id="outputRelyUser">N</span> người phụ thuộc là <span id="outputTax">0</span>.</p>
+
+    </section>
+
+    <section>
+        <div class="mx-auto" style="width: 400px; height: 50px;">
+            <h3>Bài tập nộp: Tính tiền cáp</h3>
+        </div>
+        <p>Viết chương trình tính hóa đơn khách hàng cho một công ty cáp. Có 2 loại khách hàng: Nhà dân và doanh nghiệp. Có 2 mức giá tính tiền cáp:</p>
+        <p>1. Nhà dân:</p>
+        <p>• Phí xử lý hóa đơn: 4.5$</p>
+        <p>• Phí dịch vụ cơ bản: 20.5$</p>
+        <p>• Thuê kênh cao cấp: 7.5$ / kênh</p>
+        <p>2. Doanh nghiệp</p>
+        <p>• Phí xử lý hóa đơn: 15$</p>
+        <p>• Phí dịch vụ cơ bản: 75$ cho tổng 10 kết nối đầu, mỗi kết nối thêm 5$ / kết nối</p>
+        <p>• Thuê kênh cao cấp: 50$ / kênh</p>
+        <p>Chương trình cho phép nhập vào Mã khách hàng, loại khách hàng, số kết nối, số kênh cao cấp. Nếu chọn loại khách hàng là Doanh nghiệp ô nhập số kết nối sẽ hiện lên, nếu chọn loại khách hàng là nhà dân thì ô nhập kết nối sẽ ẩn đi hoặc disabled</p>
+
+        <div class="input-group mb-3">
+            <label class="input-group-text" for = "inputLoaiKH">Khách hàng</label>
+            <select class="form-select" id="inputLoaiKH" onchange="onChangeTest()">
+                <option value="null" selected>Chọn loại khách hàng ...</option>
+                <option value="0">Nhà dân</option>
+                <option value="1">Doanh nghiệp</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Nhập phí dịch vụ cơ bản (chỉ giành cho doanh nghiệp):</label>
+            <input id="inputDisabled" class="form-control" type="text" placeholder="Ok con dê" disabled>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Nhập số kênh cao cấp được thuê:</label>
+            <input id="inputCableRent" class="form-control" type="text" placeholder="Ok con dê">
+        </div>
+
+        <div>
+            <button class="btn btn-success my-2" onclick="btnTinhCable()" id="btnCable">Kết quả</button>
+        </div>
+
+        
+    
+        <p>Tổng số tiền phải trả cho công ty cáp: <span id="outputTienCap">N</span>.</p>
+
+    </section>
+
+
+
+
+    
+
+
+
+    <!-- boostrap 5.3.0 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <!-- index js -->
+    <script src="/js/index.js"></script>
+</body>
+</html>
