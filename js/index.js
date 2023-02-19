@@ -5,6 +5,7 @@ function btnTest() {
     var diemToan = document.getElementById('inputDiemToan');
     var diemLy = document.getElementById('inputDiemLy');
     var diemHoa = document.getElementById('inputDiemHoa');
+    var diemChuan = +document.getElementById('inputDiemChuan').value;
     
     var diemTrungBinh;
     var value1 = e1.value;
@@ -13,14 +14,19 @@ function btnTest() {
     diemLy = +diemLy.value;
     diemHoa = +diemHoa.value;
     
-    diemTrungBinh = (value1*1 + value2*1 + diemHoa + diemLy + diemToan)/3;
+    diemTrungBinh = (value1*1 + value2*1 + diemHoa + diemLy + diemToan);
+    console.log(diemTrungBinh);
 
-    if (diemTrungBinh >= 10){
-        diemTrungBinh = 10;
+    if (diemTrungBinh >= diemChuan){
+        document.getElementById('output').innerHTML = 'Bạn đã đậu';
+        
     }
+    else {
+        document.getElementById('output').innerHTML = 'Bạn đã rớt';
+    }
+    document.getElementById('output1').innerHTML = diemTrungBinh;
 
-    console.log(diemToan, diemLy,  diemHoa);
-    document.getElementById('output').innerHTML = diemTrungBinh;
+    // console.log(diemToan, diemLy,  diemHoa);
 }
 
 document.getElementById('btnTienDien').onclick = function(){
